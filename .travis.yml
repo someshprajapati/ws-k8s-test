@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project mca-somesh-2
   - gcloud config set compute/zone us-central1-a
-  - gcloud container clusters get-credentials multi-k8s-test
+  - gcloud container clusters get-credentials ws-k8s-test
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t someshprajapati/ws-k8s-test -f ./client/Dockerfile.dev ./client
 
